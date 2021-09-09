@@ -68,9 +68,96 @@
     $$\delta t(\theta)=\dfrac{v^2 l}{c^3} cos(2 \theta)$$
     \includegraphics[height=4cm, width=4cm]{1.JPG}
 
-      % \textcolor{hwColor}{
+      \textcolor{hwColor}{
+        The Michelson–Morley experiment was an attempt to detect the existence of the luminiferous aether, 
+        a supposed medium permeating space that was thought to be the carrier of light waves.
+        \\
+        As we will see at the end of this experiment, the exact length of the two arms are have direct 
+        effect on the interference of the waves that get to the telescope. Since the setting up the exact length 
+        for the two arms can get very hard (physically) and the lengths have some difference that can manifest 
+        itself in the interference pattern. To get around this issue, we can rotate the entire setup by some degree $\theta$.
+        \\
+        \\
+        \textbf{Note:} Page 54 of the textbook mentions that the light traveling from glass plate P to any of the mirrors
+        and back must be aimed into the wind at such an angle that \textbf{the resultant velocity is along the path of P and the mirror}.
+      }
 
-      % }
+      \includegraphics[height=6cm, width=8cm]{2.JPG}
+
+      \textcolor{hwColor}{
+        $
+          sin(\phi)=sin(\dfrac{\pi}{2}-\theta)=cos(\theta)
+          \\
+          \\
+        $
+        Let's start off with the speed of light from the origin to $M_1$ and $M_2$.
+        \\
+        \\
+        $
+          \begin{cases}
+            sin(\phi)=\dfrac{v}{c} cos(\theta) ~~~~~ \textbf{For} ~~ M_1
+            \\
+            \\
+            sin(\phi)=\dfrac{v}{c} sin(\theta) ~~~~~ \textbf{For} ~~ M_2
+          \end{cases}
+          \\
+          \\
+          \\
+          \therefore ~~~~
+          \begin{cases}
+            V_1=c cos(\phi)=c \sqrt{1-sin^2(\phi)}=c \sqrt{1-\left(\dfrac{v}{c} cos(\theta)\right)^2}
+            \\
+            \\
+            V_2=c cos(\phi)=c \sqrt{1-sin^2(\phi)}=c \sqrt{1-\left(\dfrac{v}{c} sin(\theta)\right)^2}
+          \end{cases}
+        $
+        \\
+        \\
+        \\
+        Now by having the velocity of light for each path, we can calculate the time:
+        \\
+        \\
+        $
+          \begin{cases}
+            t_1=\dfrac{2l}{V_1}=\dfrac{2l}{c \sqrt{1-\left(\dfrac{v}{c} cos(\theta)\right)^2}}
+            \\
+            \\
+            t_2=\dfrac{2l}{V_2}=\dfrac{2l}{c \sqrt{1-\left(\dfrac{v}{c} sin(\theta)\right)^2}}
+          \end{cases}
+          \\
+          \\
+          \\
+          \Delta t=t_2-t_1=\dfrac{2l}{c \sqrt{1-\left(\dfrac{v}{c} sin(\theta)\right)^2}}
+          -\dfrac{2l}{c \sqrt{1-\left(\dfrac{v}{c} cos(\theta)\right)^2}}
+          \\
+          \\
+          \\
+          =\dfrac{2l}{c} \left[\dfrac{1}{\sqrt{1-\left(\dfrac{v}{c} sin(\theta)\right)^2}}
+          -\dfrac{1}{\sqrt{1-\left(\dfrac{v}{c} cos(\theta)\right)^2}}\right]
+          \\
+          \\
+          \\
+          =\dfrac{2l}{c} \left[
+            \left(1-\left(\dfrac{v}{c}\right)^2 sin^2(\theta)\right)^{-1/2}
+            -\left(1-\left(\dfrac{v}{c}\right)^2 cos^2(\theta)\right)^{-1/2}
+          \right]
+          \\
+          \\
+          \\
+          \approxeq \dfrac{2l}{c} \left[
+            \left(1-\dfrac{1}{2} \left(\dfrac{v}{c}\right)^2 sin^2(\theta)\right)
+            -\left(1+\dfrac{1}{2} \left(\dfrac{v}{c}\right)^2 cos^2(\theta) \right)
+          \right]
+          \\
+          \\
+          \\
+          =\dfrac{2l}{c} \left[\dfrac{1}{2} \left(\dfrac{v}{c}\right)^2 \left(-sin(\theta)+cos^2(\theta)\right)\right]
+          \\
+          \\
+          \\
+          \therefore ~~~~ \Delta t \approxeq \dfrac{lv^2}{c^3} cos(2 \theta) ~~~ \checkmark
+        $ 
+      }
 
     \item \textbf{(3-4)} Given that 
     $$x^'=\gamma (x-vt)$$
