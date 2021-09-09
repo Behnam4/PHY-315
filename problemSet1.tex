@@ -151,7 +151,7 @@
           \\
           \\
           \\
-          =\dfrac{2l}{c} \left[\dfrac{1}{2} \left(\dfrac{v}{c}\right)^2 \left(-sin(\theta)+cos^2(\theta)\right)\right]
+          =\dfrac{2l}{c} \left[\dfrac{1}{2} \left(\dfrac{v}{c}\right)^2 \left(-sin^2(\theta)+cos^2(\theta)\right)\right]
           \\
           \\
           \\
@@ -165,9 +165,70 @@
     $$t^'=\gamma (t-\dfrac{vx}{c^2})$$
     derive the equations for $x$ and $t$ in terms of $x^'$ and $t^'$.
 
-      % \textcolor{hwColor}{
-
-      % }
+      \textcolor{hwColor}{
+        $
+          \begin{cases}
+            x^'=\gamma (x-vt) \Longrightarrow x=\dfrac{x^'}{\gamma}+v t
+            \\
+            \\
+            \gamma (t-\dfrac{vx}{c^2}) \Longrightarrow t=\dfrac{t^'}{\gamma}+\dfrac{v}{c^2} x
+          \end{cases}
+          \\
+          \\
+          \\
+          x=\dfrac{x^'}{\gamma}+v t
+          =\dfrac{x^'}{\gamma}+v \left[\dfrac{t^'}{\gamma}+\dfrac{v}{c^2} x\right]
+          =\dfrac{x^'}{\gamma}+\dfrac{v t^'}{\gamma}+\dfrac{v^2}{c^2} x
+          \\
+          \\
+          \\
+          x-\dfrac{v^2}{c^2} x=\dfrac{1}{\gamma} \left(x^'+vt^'\right)
+        $
+        \\
+        \\
+        $
+          x\left(1-\dfrac{v^2}{c^2}\right)=\dfrac{1}{\gamma} \left(x^'+vt^'\right)
+        $
+        \\
+        \\
+        Since $\gamma=\dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}$ then we have:
+        \\
+        \\
+        $
+          \dfrac{x}{\gamma^2}=\dfrac{1}{\gamma} \left(x^'+vt^'\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ x=\gamma \left(x^'+vt^'\right) ~~~ \checkmark
+        $
+        \\
+        \\
+        \\
+        \\
+        \\
+        Now let's find $t$
+        \\
+        \\
+        $
+          t=\dfrac{t^'}{\gamma}+\dfrac{v}{c^2} x=\dfrac{t^'}{\gamma}+\dfrac{v}{c^2} \left[\gamma \left(x^'+vt^'\right)\right]
+          \\
+          \\
+          \\
+          t-\dfrac{v^2}{c^2}=\dfrac{t^'}{\gamma}+\dfrac{v}{c^2}\dfrac{x^'}{\gamma}
+          \\
+          \\
+          \\
+          t\left(1-\dfrac{v^2}{c^2}\right)=\dfrac{1}{\gamma} \left(t^'+\dfrac{v}{c^2} x^'\right)
+          \\
+          \\
+          \\
+          \dfrac{t}{\gamma^2}=\dfrac{1}{\gamma} \left(t^'+\dfrac{v}{c^2} x^'\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ t=\gamma \left(t^'+\dfrac{v}{c^2} x^'\right) ~~~ \checkmark
+        $
+      }
 
     \item \textbf{(4-4)} Our galaxy is about $10^5$ light-years across, and the most energetic particles known
     have an energy of about $10^{19} ~ eV$. How long would it take a proton with this energy to traverse the galaxy
