@@ -119,6 +119,7 @@
 
     \end{enumerate}
 
+    \pagebreak
 
     \item \textbf{5-7} An inertial system $S_1$ has a constant velocity $v_1$ along the $x$ axis relative to an inertial system $S$.
     Inertial system $S_2$ has a velocity $v_2$ relative to $S_1$. Two successive Lorentz-Einstein transformations enable us to
@@ -127,6 +128,120 @@
     provided we take the velocity $v$ of $S_2$ relative to $S$ as
     $$v=\dfrac{v_1+v_2}{1+\dfrac{v_1 v_2}{c^2}}$$
 
+      \textcolor{hwColor}{
+        We are asked to show that two successive Lorentz-Einstein transformations gives the same result as a single Lorentz-Einstein transformation.
+        Let's write down the Lorentz transformations:
+        \\
+        \\
+        \\
+        $
+          \begin{cases}
+            x_0^'=\gamma_1 \left(x_0-\beta_1 x_1\right)
+            \\
+            \\
+            x_1^'=\gamma_1 \left(x_1-\beta_1 x_0\right)
+          \end{cases} ~~~~~ x_0=ct, ~~~ \beta_1=\dfrac{v_1}{c}, ~~~ \gamma_1=\dfrac{1}{\sqrt{1-\left(\dfrac{v_1}{c}\right)^2}}
+        $
+        \\
+        \\
+        Defining another frame as the double-prime, then the Lorentz transformation:
+        \\
+        \\
+        $
+          \begin{cases}
+            x_0^{''}=\gamma_2 \left(x_0^'-\beta_2 x_1^'\right)
+            \\
+            \\
+            x_1^{''}=\gamma_2 \left(x_1^'-\beta_2 x_0^'\right)
+          \end{cases} ~~~~~ x_0=ct, ~~~ \beta_2=\dfrac{v_2}{c}, ~~~ \gamma_2=\dfrac{1}{\sqrt{1-\left(\dfrac{v_2}{c}\right)^2}}
+          \\
+          \\
+          \\
+          \begin{cases}
+            x_0^{''}=\gamma_1 \gamma_2 \left[\left(1+\beta_1 \beta_2\right)x_0-\left(\beta_1 \beta_2\right)x_1\right]
+            \\
+            \\
+            \\
+            x_1^{''}=\gamma_1 \gamma_2 \left[\left(1+\beta_1 \beta_2\right)x_1-\left(\beta_1 \beta_2\right)x_0\right]
+          \end{cases}
+        $
+        \\
+        \\
+        \\
+        Let's have the double-primed frame traveling at a speed $v$ relative to the unprimed frame, 
+        then the Lorentz transformation relating the two is:
+        \\
+        \\
+        \\
+        $
+          \begin{cases}
+            x_0^{''}=\gamma \left(x_0-\beta x_1\right)
+            \\
+            \\
+            x_1^{''}=\gamma \left(x_1-\beta x_0\right)
+          \end{cases} ~~~~~ x_0=ct, ~~~ \beta=\dfrac{v}{c}, ~~~ \gamma=\dfrac{1}{\sqrt{1-\left(\dfrac{v}{c}\right)^2}}
+        $
+        \\
+        \\
+        \\
+        Comparing this to the double transformation, we have the following result:
+        \\
+        \\
+        \\
+        $
+          \begin{cases}
+            \gamma=\gamma_1 \gamma_2 \left(1+\beta_1 \beta_2\right)
+            \\
+            \\
+            \gamma \beta=\gamma_1 \gamma_2 \left(\beta_1+\beta_2\right)
+            \\
+            \\
+            \gamma=\gamma_1 \gamma_2 \left(1+\beta_1 \beta_2\right)
+            \\
+            \\
+            \gamma \beta=\gamma_1 \gamma_2 \left(\beta_1+\beta_2\right)
+          \end{cases}
+        $
+        \\
+        \\
+        \\
+        Hence,
+        \\
+        \\
+        $
+          \dfrac{1}{\sqrt{1-\left(\dfrac{v}{c}\right)^2}}
+          =\dfrac{1}{\sqrt{1-\left(\dfrac{v_1}{c}\right)^2}} \dfrac{1}{\sqrt{1-\left(\dfrac{v_2}{c}\right)^2}} \left(1+\dfrac{v_1 v_2}{c^2}\right)
+          \\
+          \\
+          \\
+          1-\left(\dfrac{v}{c}\right)^2=\dfrac{ \left(1-\left(\dfrac{v_1}{c}\right)^2\right) \left(1-\left(\dfrac{v_2}{c}\right)^2\right)  }{\left(1+\dfrac{v_1 v_2}{c^2}\right)^2}
+          \\
+          \\
+          \\
+          v=\sqrt{c^2-c^2\dfrac{
+            \left[1-\left(\dfrac{v_1}{c}\right)^2\right]
+            \left[1-\left(\dfrac{v_2}{c}\right)^2\right]
+          }{
+            \left[1+\dfrac{v_1 v_2}{c^2}\right]^2
+          }}
+          \\
+          \\
+          \\
+          \\
+          =\sqrt{
+            c^2-\dfrac{c^2+\left(\dfrac{v_1 v_2}{c}\right)^2-v_1^2-v_2^2
+          }{
+            1+2\dfrac{v_1 v_2}{c^2+\left(\dfrac{v_1 v_2}{c^2}\right)^2}
+          }}
+          \\
+          \\
+          \\
+          \\
+          \therefore ~~~~ v=\dfrac{v_1+v_2}{1+\dfrac{v_1 v_2}{c^2}} ~~~ \checkmark
+        $
+      }
+
+    \pagebreak
 
     \item \textbf{5-9} Three identical radio transmitters $A, B,$ and $C,$ each transmitting at the frequency $v_0$ in its own
     rest frame, are in motion as shown.
