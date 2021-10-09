@@ -267,12 +267,59 @@
         }
 
 
-      \item Find $\langle x^2 \rangle$ in the state $n=2$, $\ell$, $m=1$. \emph{Hint: this state is not symmetrical in 
+      \item Find $\langle x^2 \rangle$ in the state $n=2$, $\ell=1$, $m=1$. \emph{Hint: this state is not symmetrical in 
       $x, y,z.$ Use $x=r sin(\theta) cos(\phi)$.}
 
-        % \textcolor{hwColor}{
-
-        % }
+        \textcolor{hwColor}{
+          \\
+          By consulting the textbook we know that $\psi_{2, 1, 1}(r, \theta, \phi)=\dfrac{1}{8\sqrt{\pi a^3}} \dfrac{r}{a} e^{-r/2a} sin(\theta) e^{i \theta}$. Therefore,
+          \\
+          $
+            \langle x^2 \rangle=\bigints\limits_{0}^{2\pi} 
+            ~ \bigints\limits_{0}^{\pi} 
+            ~ \bigints\limits_{0}^{\infty} ~ x^2 ~ \psi^*_{211} \psi_{211} ~ r^2 sin(\theta) dr ~ d\theta ~ d\phi
+            \\
+            \\
+            \\
+            =\bigints\limits_{0}^{2\pi} 
+            ~ \bigints\limits_{0}^{\pi} 
+            ~ \bigints\limits_{0}^{\infty} ~ \left(r sin(\theta) cos(\phi)\right)^2 
+            ~ \left[
+              \dfrac{1}{8\sqrt{\pi a^3}} \dfrac{r}{a} e^{-r/2a} sin(\theta) e^{-i \theta} \psi_{211} 
+              ~ \dfrac{1}{8\sqrt{\pi a^3}} \dfrac{r}{a} e^{-r/2a} sin(\theta) e^{i \theta}
+            \right]
+            ~ r^2 sin(\theta) dr ~ d\theta ~ d\phi
+            \\
+            \\
+            \\
+            =\dfrac{1}{64 \pi a^5}
+            \bigints\limits_{0}^{2\pi} cos^2(\phi) e^{i \phi} e^{-i \phi} d\phi
+            ~ \bigints\limits_{0}^{\pi} sin^5(\theta) d\theta
+            ~ \bigints\limits_{0}^{\infty} r^6 e^{-r/a} dr
+            \\
+            \\
+            \\
+            =\dfrac{1}{64 \pi a^5}
+            \left[
+              \left(\dfrac{\phi}{2}+\dfrac{sin(2\phi)}{4}\right) \Big|_{0}^{2 \pi}
+              .\left(-cos(\theta)+\dfrac{2 cos^3(\theta)}{3}-\dfrac{cos^5(\theta)}{5}\right) \Big|_{0}^{\pi}
+              .\left(\dfrac{6!}{(1/a)^{6+1}}\right)
+            \right]
+            \\
+            \\
+            \\
+            =\dfrac{1}{64 \pi a^5}  \left[
+              \pi
+              .\dfrac{16}{15}
+              .720 a^7
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \langle x^2 \rangle=12a^2 ~~~~ \checkmark
+            \\
+          $
+        }
 
 
     \end{enumerate}
@@ -281,11 +328,90 @@
     (The answer is \emph{not zero!}) \emph{Hint:} First you must figure out the probablity that the electron would be found between
     $r$ and $r+dr$.
 
-      % \textcolor{hwColor}{
-
-      % }
+      \textcolor{hwColor}{
+        \\
+        Recall that the state of a quantum object is completely specified by a wavefunction denoted as $\psi(x)$. The probability 
+        density (or probably distribution) is given by taking the square of the absolute value of the wave function. It gives us 
+        the likelihood of finding an electron (or some other system) at some given point in space. The question is why do we need 
+        to take the square of the absolute value of the wave function? Shouldn't the wave function itself be able to tell us 
+        the probability? Although the wave function itself does indeed tell us the probability amplitude of the wave produced, 
+        it usually is given by some complex value with imaginary numbers and therefore does not hold any true physically measurable 
+        meaning. To rid the wave function of its imaginary numbers, we need to take the square of the absolute value which does 
+        in fact produce a measurable and meaningful number. 
+        \\
+        By starting off with the wavefunction of the ground state which is $\psi_{100}=\dfrac{1}{\sqrt{\pi a^3}} e^{-r/a}$, we have:
+        \\
+        \\
+        For a sphere we have:
+        \\
+        \\
+        $
+          V=\dfrac{4}{3} \pi r^3 \Longrightarrow \dfrac{dV}{dr}=\dfrac{4}{3} \pi \dfrac{d}{dr}(r^3)
+          \\
+          \\
+          \\
+          \therefore ~~~ dV=4 \pi r^2 dr ~~~~ \checkmark ~~~~ \text{The spherical volume element between $r$ and $r+dr$}
+        $
+        \\
+        \\
+        \\
+        $
+          |\psi_{100}|^2=\left(\dfrac{1}{\sqrt{\pi a^3}} e^{-r/a}\right)^2=\dfrac{1}{\pi a^3} e^{-2r/a}
+          \\
+          \\
+          \\
+          P(r) dr=|\psi_{100}|^2 dV=|\psi_{100}|^2 4 \pi r^2 dr
+          \\
+          \\
+          \\
+          \therefore ~~~ P(r)=4 \pi r^2 |\psi_{100}|^2=4 \pi r^2 ~ \dfrac{1}{\pi a^3} e^{-2r/a}
+        $
+        \\
+        \\
+        \\
+        \\
+        \\
+        We can use calculus to find the value of $r$ such that $P(r)$ is at its max. By equating the derivative 
+        of $P(r)$ with respect to $r$ to zero, we can find the maximum probable value. (The maxima)
+        \\
+        \\
+        \\
+        $
+          \dfrac{dP(r)}{dr}=\dfrac{d}{dr} \left(4 \pi r^2 ~ \dfrac{1}{\pi a^3} e^{-2r/a}\right)
+          =\dfrac{4}{a^3} \dfrac{d}{dr} \left(r^2 e^{-2r/a}\right)
+          \\
+          \\
+          \\
+          =\dfrac{4}{a^3} \left[
+            2r e^{-2r/a}-\left(\dfrac{2}{a}\right) e^{-2r/a} r^2
+          \right]
+          \\
+          \\
+          \\
+          \dfrac{dP(r)}{dr}=0 \Longrightarrow \dfrac{4}{a^3} \left[
+            2r e^{-2r/a}-\left(\dfrac{2}{a}\right) e^{-2r/a} r^2
+          \right]=0
+          \\
+          \\
+          \\ 
+          r e^{-2r/a}-\dfrac{r^2}{a} e^{-2r/a}=0
+          \\
+          \\
+          \\
+          1=\dfrac{r^2}{a} 
+          \\
+          \\
+          \\
+          \therefore ~~~ r=a ~~~~ \checkmark
+        $
+      }
 
 
   \end{enumerate}
 
 \end{document}
+
+
+
+
+% dV=4πr2dr can be thought of as the spherical volume element between r and r+dr.
