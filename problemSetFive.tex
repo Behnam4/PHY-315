@@ -82,7 +82,7 @@
     $$
       \langle W \rangle=\bigintsss\limits_{0}^{2\pi} d\phi 
       ~ \bigintsss\limits_{0}^{\pi} sin(\theta) d\theta 
-      ~ \bigintsss\limits_{0}^{\infty} r^2 dr ~ W \psi^*(r, \theta, \phi) \psi(r, \theta, \phi) 
+      ~ \bigintsss\limits_{0}^{\infty} W dr ~ r^2 \psi^*(r, \theta, \phi) \psi(r, \theta, \phi) 
     $$
     Given that the hydrogen atom contains a nucleus and an electron, quantum mechanics allows one to predict the probability of finding the electron at 
     any given radial distance $r$. It is given by the square of a mathematical function known as the \emph{wavefunction} which is a 
@@ -157,9 +157,114 @@
       \item Find $\langle x \rangle$ and $\langle x^2 \rangle$ for an electron in the ground state of hydrogen. 
       \emph{Hint: This requires no new integration-note that $r^2=x^2+y^2+z^2$, and exploit the symmetry of the ground state}
 
-        % \textcolor{hwColor}{
-
-        % }
+        \textcolor{hwColor}{
+          \\
+          We know that in the Spherical coordinate system we have
+          $$
+            \begin{cases}
+              x=r sin(\theta) cos(\phi)
+              \\
+              y=r sin(\theta) sin(\phi)
+              \\
+              z=r cos(\theta)
+            \end{cases}
+          $$
+          Therefore,
+          \\
+          \\
+          $
+            \langle x \rangle=\bigints\limits_{0}^{2\pi} 
+            ~ \bigints\limits_{0}^{\pi} 
+            ~ \bigints\limits_{0}^{\infty} ~ x ~ \psi^*_{100} \psi_{100} ~ r^2 sin(\theta) dr ~ d\theta ~ d\phi
+            \\
+            \\
+            \\
+            =\bigints\limits_{0}^{2\pi} 
+            ~ \bigints\limits_{0}^{\pi} 
+            ~ \bigints\limits_{0}^{\infty} 
+            ~ \left(r sin(\theta) cos(\phi)\right) 
+            ~ \left(\dfrac{1}{\sqrt{\pi a^3}} e^{-r/a} . \dfrac{1}{\sqrt{\pi a^3}} e^{-r/a}\right) 
+            ~ r^2 sin(\theta) dr ~ d\theta ~ d\phi
+            \\
+            \\
+            \\
+            =\dfrac{1}{\pi a^3} \bigints\limits_{0}^{2\pi} cos(\phi) d\phi 
+            ~ \bigints\limits_{0}^{\pi} sin^2(\theta) d\theta
+            ~ \bigints\limits_{0}^{\infty} r^3 e^{-2r/a} dr
+            \\
+            \\
+            \\
+            \\
+            \\
+            \bigints\limits_{0}^{2 \pi} cos(\phi) d\phi=sin(\theta) \Big|_{0}^{2 \pi}=sin(2 \pi)-sin(0)=0 ~~~~ \checkmark
+            \\
+            \\
+            \\
+            \\
+            \\
+            \langle x \rangle=0 
+            ~ \bigints\limits_{0}^{\pi} sin^2(\theta) d\theta
+            ~ \bigints\limits_{0}^{\infty} r^3 e^{-2r/a} dr
+            \\
+            \\
+            \\
+            \therefore ~~~ \langle x \rangle=0 ~~~~ \checkmark
+          $
+          \\
+          \\
+          This integral is zero because we are integrating an odd function over a symmetric region. $\langle x \rangle$ is the 
+          average position of an electron on the x-axis, because $x=r sin(\theta) cos(\phi)$ is the conversion from Spherical to 
+          Cartesian coordinates. This result tells us that the average position is $0$.
+          \\
+          \\
+          \\
+          $
+            \langle x^2 \rangle=\bigints\limits_{0}^{2\pi} 
+            ~ \bigints\limits_{0}^{\pi} 
+            ~ \bigints\limits_{0}^{\infty} ~ x^2 ~ \psi^*_{100} \psi_{100} ~ r^2 sin(\theta) dr ~ d\theta ~ d\phi
+            \\
+            \\
+            \\
+            =\bigints\limits_{0}^{2\pi} 
+            ~ \bigints\limits_{0}^{\pi} 
+            ~ \bigints\limits_{0}^{\infty} 
+            ~ \left(r sin(\theta) cos(\phi)\right)^2 
+            ~ \left(\dfrac{1}{\sqrt{\pi a^3}} e^{-r/a} . \dfrac{1}{\sqrt{\pi a^3}} e^{-r/a}\right) 
+            ~ r^2 sin(\theta) dr ~ d\theta ~ d\phi
+            \\
+            \\
+            \\
+            =\dfrac{1}{\pi a^3} \bigints\limits_{0}^{2\pi} cos^2(\phi) d\phi
+            ~ \bigints\limits_{0}^{\pi} sin^3(\theta) d\theta
+            ~ \bigints\limits_{0}^{\infty} r^4 e^{-2r/a} dr
+            \\
+            \\ 
+            \\
+            =\dfrac{1}{\pi a^3} \left[
+              \left(\dfrac{\phi}{2}+\dfrac{sin(2\phi)}{4}\right) \Big|_{0}^{2 \pi}
+              \left(-cos(\theta)+\dfrac{cos^3(\theta)}{3}\right) \Big|_{0}^{\pi}
+              \left(\dfrac{4!}{(2/a)^{4+1}}\right)
+            \right]
+            \\
+            \\
+            \\
+            =\dfrac{1}{\pi a^3} \left[
+              (\pi).
+              (\dfrac{4}{3}).
+              (\dfrac{24 a^5}{32})
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ \langle x^2 \rangle=a^2 ~~~~ \checkmark
+          $
+          \\
+          \\
+          For $x^2$ we see that $x$ is an arbitrary direction meaning $x, y$ and $z$ have equal weights. Therefore, we can say that 
+          the expectation value of $x^2$ is one third of the expectation value of $r^2$. We also see that the expectation value of 
+          $x^2$ does not produce an odd function hence it will not be zero.
+          \\
+        }
 
 
       \item Find $\langle x^2 \rangle$ in the state $n=2$, $\ell$, $m=1$. \emph{Hint: this state is not symmetrical in 
