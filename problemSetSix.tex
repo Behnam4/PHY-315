@@ -62,15 +62,110 @@
       \item Derive Equation $4.131$ from Equation $4.130$. \emph{Hint:} Use a test function; otherwise
       you are likely to drop some terms.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From the textbook we have.
+          \\
+          \\
+          $
+            \begin{cases}
+              L_{\pm}=\pm \hbar e^{\pm i \phi} \left(
+                \dfrac{\partial}{\partial\theta}
+                \pm ~ i ~ cot\theta \dfrac{\partial}{\partial\phi}
+              \right) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ (4.130)
+              \\
+              \\
+              L_+ ~ L_-=-\hbar^2 \left(
+                \dfrac{\partial^2}{\partial \theta^2}
+                +cot\theta ~ \dfrac{\partial}{\partial \theta}
+                +cot^2\theta \dfrac{\partial^2}{\partial \phi^2}
+                +i ~ \dfrac{\partial}{\partial \phi}
+              \right) ~~~~~~~ (4.131)
+            \end{cases}
+            \\
+            \\
+            \\
+            L_+ ~ L_- \times f=-\hbar^2 ~ e^{i \phi} \left(\dfrac{\partial}{\partial \theta}+i ~ cot\theta \dfrac{\partial}{\partial \phi}\right)
+            \left(
+              e^{-i \phi} \dfrac{\partial f}{\partial \theta}-i e^{-i \phi} cot\theta \dfrac{\partial f}{\partial \phi}
+            \right)
+            \\
+            \\
+            \\
+            =-\hbar^2 ~ e^{i \phi} (
+              e^{-i \phi} \left[\dfrac{\partial^2 f}{\partial \theta^2}+ i ~ csc^2 \theta \dfrac{\partial f}{\partial \phi}-i ~ cot\theta \dfrac{\partial^2 f}{\partial\theta \partial \phi}\right]
+              \\
+              +i ~ cot\theta \left[-i ~ e^{-i\phi} \left(\dfrac{\partial f}{\partial \theta}-i~cot\theta \dfrac{\partial f}{\partial \phi}\right)+ e^{-i \phi} \left(\dfrac{\partial^2 f}{\partial \phi \partial \theta}-i ~ cot\theta \dfrac{\partial^2 f}{\partial \phi^2}\right)   \right]
+            )
+            \\
+            \\
+            \\
+            =-\hbar^2 ~ \left[
+              \dfrac{\partial^2 f}{\partial \theta^2}
+              +cot\theta \dfrac{\partial f}{\partial \theta}
+              +cot^2\theta \dfrac{\partial^2 f}{\partial \phi^2}
+              +i \left(
+                csc^2\theta \dfrac{\partial f}{\partial \phi}
+                -cot\theta \dfrac{\partial^2 f}{\partial\theta \partial\phi}
+                -cot^2\theta \dfrac{\partial f}{\partial \phi}
+                +cot\theta \dfrac{\partial^2 f}{\partial\phi \partial\theta}
+              \right)
+            \right]
+            \\
+            \\
+          $
+          \\
+          Factoring out $f$.
+          \\
+          \\
+          $
+            =-\hbar^2 ~ f\left[
+              \dfrac{\partial^2}{\partial\theta^2}+cot\theta \dfrac{\partial}{\partial \theta}+cot^2\theta \dfrac{\partial^2}{\partial \phi^2}
+              -i ~ cot^2 \theta \dfrac{\partial}{\partial \phi} 
+              +i ~ csc^2\theta \dfrac{\partial}{\partial \phi}
+            \right]
+            \\
+            \\
+            \\
+            \therefore ~~~ L_+ ~ L_-=-\hbar^2 \left(
+              \dfrac{\partial^2}{\partial \theta^2}
+              +cot\theta ~ \dfrac{\partial}{\partial \theta}
+              +cot^2\theta \dfrac{\partial^2}{\partial \phi^2}
+              +i ~ \dfrac{\partial}{\partial \phi}
+            \right) ~~~~ \checkmark
+          $
+        }
 
       \item Derive Equations $4.132$ from Equations $4.129$ and $4.131$. \emph{Hint:} Use Equation $4.112$.
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          From the textbook we have.
+          \\
+          \\
+          $
+            \begin{cases}
+              L^2=L_{\pm} ~ L_{\mp}+L^2_z \mp \hbar L_z ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ (4.112)
+              \\
+              \\
+              L_z=-i \hbar \dfrac{\partial}{\partial \phi} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ (4.129)
+              \\
+              \\
+              L_+ ~ L_-=-\hbar^2 \left(
+                \dfrac{\partial^2}{\partial \theta^2}
+                +cot\theta ~ \dfrac{\partial}{\partial \theta}
+                +cot^2\theta \dfrac{\partial^2}{\partial \phi^2}
+                +i ~ \dfrac{\partial}{\partial \phi}
+              \right) ~~~~~~~ (4.131)
+              \\
+              \\
+              L^2=-\hbar^2 \left[
+                \dfrac{1}{sin\theta} \dfrac{\partial}{\partial \theta} \left(sin\theta \dfrac{\partial}{\partial \theta}\right)
+                +\dfrac{1}{sin^2\theta} \dfrac{\partial^2}{\partial \phi^2}
+              \right] ~~~~~~~~~~~~~~~~~ (4.132)
+            \end{cases}
+          $
+        }
 
     \end{enumerate}
 
