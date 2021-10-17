@@ -136,6 +136,8 @@
           $
         }
 
+      \pagebreak
+
       \item Derive Equations $4.132$ from Equations $4.129$ and $4.131$. \emph{Hint:} Use Equation $4.112$.
 
         \textcolor{hwColor}{
@@ -164,7 +166,36 @@
                 +\dfrac{1}{sin^2\theta} \dfrac{\partial^2}{\partial \phi^2}
               \right] ~~~~~~~~~~~~~~~~~ (4.132)
             \end{cases}
+            \\
+            \\
+            \\
+            \\
+            L^2=-\hbar^2 \left(\dfrac{\partial^2}{\partial\theta^2}+cot\theta \dfrac{\partial}{\partial\theta}+cot^2\theta \dfrac{\partial^2}{\partial\phi^2}+i \dfrac{\partial}{\partial \phi}\right)
+            -\hbar^2 \dfrac{\partial^2}{\partial \phi^2}
+            -\hbar \dfrac{\partial}{\partial \phi} \dfrac{\hbar}{i}
+            \\
+            \\
+            \\
+            =\hbar^2 \left(\dfrac{\partial^2}{\partial\theta}+\dfrac{\partial^2}{\partial \phi^2}+cos^2\theta \dfrac{\partial^2}{\partial \phi^2}\right)
+            \\
+            \\
+            \\
+            =\hbar^2 \left(
+              \dfrac{\partial^2}{\partial \theta^2}
+              +cot\theta \dfrac{\partial}{\partial \theta}
+              +\dfrac{1}{sin^2 \theta} \dfrac{\partial^2}{\partial \phi^2}
+            \right)
+            \\
+            \\
+            \\
+            \\
+            \therefore ~~~ L^2=-\hbar^2 \left[
+              \dfrac{1}{sin\theta} \dfrac{\partial}{\partial \theta} \left(sin\theta \dfrac{\partial}{\partial \theta}\right)
+              +\dfrac{1}{sin^2\theta} \dfrac{\partial^2}{\partial \phi^2}
+            \right] ~~~~ \checkmark
           $
+          \\
+          \\
         }
 
     \end{enumerate}
