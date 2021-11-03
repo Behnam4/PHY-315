@@ -1,0 +1,118 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{1a0252}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Quantum Physics II}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Problem Set Seven}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Onur Erten}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item \textbf{4-24}
+    \begin{enumerate}
+      \item Check that the spin matrices (Equations 4.145 and 4.147) obey the fundamental commutation relations for angular momentum, Equation 4.134.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Show that the Pauli spin matrices (Equation 4.148) satisfy the product rule 
+      $$
+        \sigma_j ~ \sigma_k=\delta_{jk}+i \sum\limits_{\ell} \epsilon_{jk \ell} \sigma_{\ell}
+      $$
+      where the indices stand for $x, y,$ or $z$, and $\epsilon_{jk \ell}$ is the \textbf{Levi-Civita} symbol: $+1$ if 
+      $jk \ell=123, 231,$ or $312; -1$ if $jk \ell=132, 213,$ or $321; 0$ otherwise.
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+
+    \item \textbf{4-48} The electron in a hydrogen atom occupies the combined spin and position state
+    $$
+      R_{21} \left(
+        \sqrt{\dfrac{1}{3}} Y_1^0 ~ X_+ +\sqrt{\dfrac{2}{3}} Y_1^1 X_-
+      \right)
+    $$
+    \begin{enumerate}
+      \item If you measured the orbital angular momentum squared ($L^2$), what values might you get,
+      and what is the probability of each?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Same for the z-component of orbital angular momentum ($L_z$).
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Same for the spin angular momentum squared ($S^2$).
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+      \item Same for the z-component of spin angular momentum ($S_z$).
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
+    \end{enumerate}
+    
+
+  \end{enumerate}
+
+\end{document}
