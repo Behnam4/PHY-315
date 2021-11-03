@@ -63,6 +63,7 @@
 
         % \textcolor{hwColor}{
         %   \\
+          
         % }
 
       \item Show that the Pauli spin matrices (Equation 4.148) satisfy the product rule 
@@ -80,35 +81,107 @@
 
     \item \textbf{4-48} The electron in a hydrogen atom occupies the combined spin and position state
     $$
-      R_{21} \left(
-        \sqrt{\dfrac{1}{3}} Y_1^0 ~ X_+ +\sqrt{\dfrac{2}{3}} Y_1^1 X_-
+      \Psi=R_{21} \left(
+        \sqrt{\dfrac{1}{3}} Y_1^0 ~ \chi_+ +\sqrt{\dfrac{2}{3}} Y_1^1 \chi_-
       \right)
     $$
+
+    \textcolor{hwColor}{
+      \\
+      Interpretation:
+      \\
+      \\
+      $
+        \begin{cases}
+          R_{21} \Longrightarrow n=2, ~ \ell=1
+          \\
+          \\
+          Y_1^0 \Longrightarrow \ell=1, ~ m_{\ell}=0
+          \\
+          \\
+          \chi_+ \Longrightarrow s=\dfrac{1}{2}, ~ m_s=\dfrac{1}{2}
+          \\
+          \\
+          Y_1^1 \Longrightarrow \ell=1, ~ m_{\ell}=1
+          \\
+          \\
+          \chi_- \Longrightarrow s=\dfrac{1}{2}, ~ m_s=-\dfrac{1}{2}
+        \end{cases}
+        \therefore ~~~ m_{\ell}+m_s=\dfrac{1}{2}
+      $
+    }
+
     \begin{enumerate}
       \item If you measured the orbital angular momentum squared ($L^2$), what values might you get,
       and what is the probability of each?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \ell=1 \Longrightarrow L^2 \Psi=\ell \hbar^2 \left(\ell+1\right) \Psi
+            \\
+            \\
+            \therefore ~~~ \hbar^2 \ell \left(\ell+1\right)=2 \hbar^2 \Longrightarrow P=1
+            \\
+            \\
+            \therefore ~~~~ \text{Probability is $100\%$}. ~~~~ \checkmark
+          $
+          \\
+        }
 
       \item Same for the z-component of orbital angular momentum ($L_z$).
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          We have two possible values for $m_{\ell}$ which are $0$ and $1$.
+          \\
+          \\
+          $
+            \begin{cases}
+              m_{\ell}=0 \Longrightarrow P=\sqrt{\dfrac{1}{3}}^2=\dfrac{1}{3}
+              \\
+              \\
+              m_{\ell}=1 \Longrightarrow P=\sqrt{\dfrac{2}{3}}^2=\dfrac{2}{3}
+            \end{cases} ~~~~~ \checkmark
+          $
+          \\
+        }
 
       \item Same for the spin angular momentum squared ($S^2$).
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            \Psi S^2=\Psi \hbar^2 S(S+1)
+            \\
+            \\
+            S=\dfrac{1}{2} \Longrightarrow \begin{cases}
+              P=1
+              \\
+              \\
+              \dfrac{3}{4} \hbar^2
+            \end{cases}
+          $
+          \\
+        }
 
       \item Same for the z-component of spin angular momentum ($S_z$).
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $
+            S_z \Psi=\Psi m_s \hbar, m_s=\pm\dfrac{1}{2}
+            \\
+            \\
+            \begin{cases}
+              m_s=+\dfrac{1}{2} \Longrightarrow P=\dfrac{1}{3}
+              \\
+              \\
+              m_s=-\dfrac{1}{2} \Longrightarrow P=\dfrac{2}{3}
+            \end{cases}
+            \\
+          $
+        }
 
     \end{enumerate}
     
