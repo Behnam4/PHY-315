@@ -61,21 +61,134 @@
     \begin{enumerate}
       \item What values of $J$, total angular momentum can it have?
 
+        % \textcolor{hwColor}{
+        %   \\
+        % }
 
       \item Use the method described in lecture (using the z-components and $\pm$ components of $J=L+S$ to find the state 
       $\vert j=\dfrac{1}{2}, j_z=\dfrac{1}{2} \rangle$ in terms of the basis $\vert l=1,l_z \rangle \vert s=\dfrac{1}{2}, s_z \rangle$.
       (Hint: First workout the $\vert j=\dfrac{3}{2}, j_z=\dfrac{3}{2} \rangle$ then use orthogonality principle).
 
+        % \textcolor{hwColor}{
+        %   \\
+        % }
 
       \item If the system is initially prepared in the state $\vert j=\dfrac{1}{2}, j_z=\dfrac{1}{2} \rangle$, what is the probability that
       measuring its value of $s_z$ would give $\dfrac{1}{2}$?
+
+        % \textcolor{hwColor}{
+        %   \\
+        % }
+
     \end{enumerate}
 
     \item \textbf{Zettili 8-4}
     Two identical particles of spin $\dfrac{1}{2}$ are enclosed in a one-dimensional box potential of length $L$ with rigid walls at 
     $x=0$ and $x=L$. Assuming that the two-particle system is in a triplet spin state, find the energy levels, the wave functions, and the degeneracies corresponding
     to the three lowest states.
-    
+
+      \textcolor{hwColor}{
+        \\
+        A particle in quantum mechanics has only a certain number of labels you can assign to it, namely its quantum numbers: 
+        including mass, spin, charge, etc. In quantum mechanics, identical particles (also called indistinguishable or indiscernible 
+        particles) are particles that cannot be distinguished from one another, even in principle.
+        \\
+        \\
+        On page $469$ of the textbook we have that there are three states (a triplet) that are symmetric, $\chi_{s}\left(\overrightarrow{S_1}, \overrightarrow{S_2}\right)$
+        $$
+          \chi_{triplet}\left(\overrightarrow{S_1}, \overrightarrow{S_2}\right)
+          =\begin{cases}
+            \vert \dfrac{1}{2} ~~ \dfrac{1}{2} \rangle_1 ~~  \vert \dfrac{1}{2} ~~ \dfrac{1}{2} \rangle_2,
+            \\
+            \\
+            \dfrac{1}{\sqrt{2}} \left(
+              \vert \dfrac{1}{2} ~~ \dfrac{1}{2} \rangle_1 ~~ \vert \dfrac{1}{2} ~~ -\dfrac{1}{2} \rangle_2
+              +\vert \dfrac{1}{2} ~~ -\dfrac{1}{2} \rangle_1 ~~ \vert \dfrac{1}{2} ~~ \dfrac{1}{2} \rangle_2
+            \right),
+            \\
+            \\
+            \vert \dfrac{1}{2} ~~ -\dfrac{1}{2} \rangle_1 ~~  \vert \dfrac{1}{2} ~~ -\dfrac{1}{2} \rangle_2,
+          \end{cases}
+        $$
+        From equation $8.62$ we know that $\Psi=\psi(r_1, r_2) ~ \chi(S_1, S_2)$. By the help of equation $8.65$ we have
+        \\
+        \\
+        $
+          \psi=\dfrac{1}{\sqrt{2}} \left[
+            \psi_{n1}(r_1) ~ \psi_{n2}(r_2)-\psi_{n1}(r_2) ~ \psi_{n2}(r_1)
+          \right]
+          \\
+          \\
+          =\dfrac{\sqrt{2}}{L} \left[
+            sin(n_1 \pi r_1/L) ~ sin(n_2 \pi r_2/L)
+            -sin(n_2 \pi r_1/L) ~ sin(n_1 \pi r_2/L)
+          \right]
+        $
+        \\
+        \\
+        We got the energy level for the two particle as $E=\dfrac{\hbar^2 \pi^2}{2m L^2} \left(n^2_1+n^2_2\right)$. Let's
+        find the energy for the ground state.
+        \\
+        \\
+        $
+          E=\dfrac{\hbar^2 \pi^2}{2m L^2} \left(1^2+2^2\right)
+          \\
+          \\
+          \\
+          \therefore ~~~ E=\dfrac{5 \hbar^2 \pi^2}{2m L^2}  ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \therefore ~~~ \Psi=
+          \dfrac{\sqrt{2}}{L} \left[
+            sin(n_1 \pi r_1/L) ~ sin(n_2 \pi r_2/L)
+            -sin(n_2 \pi r_1/L) ~ sin(n_1 \pi r_2/L)
+          \right]
+           ~ \chi(S_1, S_2)
+        $
+        \\
+        \\
+        For the first excited state we got $\begin{cases}
+          n_1=1
+          \\
+          \\
+          n_2=3
+        \end{cases} \Longrightarrow E=\dfrac{\hbar^2 \pi^2}{2m L^2} \left(1^2+3^2\right)=\dfrac{5 \hbar^2 \pi^2}{m L^2}
+        $
+        \\
+        \\
+        \\
+        \\
+        For the second excited state we got $\begin{cases}
+          n_1=2
+          \\
+          \\
+          n_2=3
+        \end{cases} \Longrightarrow E=\dfrac{\hbar^2 \pi^2}{2m L^2} \left(2^2+3^2\right)=\dfrac{13 \hbar^2 \pi^2}{2m L^2}
+        $
+        \\
+        \\
+        \\
+        Time to plug these results into equation $8.62$.
+        \\
+        \\
+        $
+          \Psi=\psi(r_1, r_2) ~ \chi(S_1, S_2)
+          \\
+          \\
+          \\
+          \therefore ~~~ \Psi=\dfrac{\sqrt{2}}{L} \left(
+            sin(\dfrac{2\pi r_1}{L}) ~ sin(\dfrac{3 \pi r_2}{L})
+            -sin(\dfrac{3 \pi r_1}{L}) sin(\dfrac{\pi r_2}{L})
+          \right) ~ \chi(S_1, S_2) ~~~~ \checkmark
+        $
+        \\
+        \\
+        \\
+        Lastly, we can conclude that the energy levels are 3-fold degenerate. (There are three different spin)
+        \\
+      }
+  
   \end{enumerate}
 
 \end{document}
