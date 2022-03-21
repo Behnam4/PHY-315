@@ -1,0 +1,432 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{flexisym}
+\usepackage{calligra}
+\usepackage{amssymb}
+\usepackage{bigints} 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
+\newcommand{\boldscriptr}{\pmb{\mathcalligra{r}}\,}
+
+\definecolor{hwColor}{HTML}{1a0252}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    \center
+
+    \begin{center}
+      \includegraphics[height=11cm, width=11cm]{asu.png}
+    \end{center}
+
+    \vline
+
+    \textsc{\LARGE Quantum Physics II}\\[1.5cm]
+
+    \HRule \\[0.5cm]
+    { \huge \bfseries Problem Set Seven}\\[0.4cm] 
+    \HRule \\[1.0cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Onur Erten}
+
+    \bigbreak
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item \textbf{4-29}
+    \begin{enumerate}
+      \item Check that the spin matrices (Equations 4.145 and 4.147) obey the fundamental communication 
+      relations for angular momentum, Equation 4.134.
+
+        \textcolor{hwColor}{
+          \\
+          From the textbook we have;
+          \\
+          \\
+          $
+            \begin{cases}
+              (4.145): ~~~ S_z=\dfrac{\hbar}{2} \begin{pmatrix}
+                1 && 0
+                \\
+                0 && -1 
+              \end{pmatrix}
+              \\
+              \\
+              (4.147): ~~~ S_x=\dfrac{\hbar}{2} \begin{pmatrix}
+                0 && 1
+                \\
+                1 && 0
+              \end{pmatrix}, ~~~ S_y=\dfrac{\hbar}{2} \begin{pmatrix}
+                0 && -i
+                \\
+                i && 0
+              \end{pmatrix}
+            \end{cases}
+            \\
+            \\
+          $
+          They should obey the angular momentum, hence:
+          \\
+          \\
+          $
+            \begin{cases}
+              [S_x, S_y]=i \hbar S_z
+              \\
+              \\
+              [S_y, S_z]=i \hbar S_x
+              \\
+              \\
+              [S_z, S_x]=i \hbar S_y
+            \end{cases}
+            \\
+            \\
+            \\
+          $
+          $
+            [S_x, S_y]=S_x S_y-S_y S_x=\dfrac{\hbar^2}{4} \left[
+              \begin{pmatrix}
+                i && 0
+                \\
+                0 && -i
+              \end{pmatrix}
+              -\begin{pmatrix}
+                -i && 0
+                \\
+                0 && i
+              \end{pmatrix}
+            \right]=2 i \dfrac{\hbar^2}{4} \begin{pmatrix}
+              1 && 0
+              \\
+              0 && -1
+            \end{pmatrix}=i \hbar S_z
+            \\
+            \\
+            \\
+          $
+          $
+            [S_y, S_z]=S_y S_z-S_z S_y=\dfrac{\hbar^2}{4} \left[
+              \begin{pmatrix}
+                0 && i
+                \\
+                i && 0
+              \end{pmatrix}
+              -\begin{pmatrix}
+                0 && -i
+                \\
+                -i && 0
+              \end{pmatrix}
+            \right]=2 i \dfrac{\hbar^2}{4} \begin{pmatrix}
+              0 && 1
+              \\
+              1 && 0
+            \end{pmatrix}=i \hbar S_x
+            \\
+            \\
+            \\
+          $
+          $
+            [S_z, S_x]=S_z S_x-S_x S_z=\dfrac{\hbar^2}{4} \left[
+              \begin{pmatrix}
+                0 && 1
+                \\
+                -1 && 0
+              \end{pmatrix}
+              -\begin{pmatrix}
+                0 && -1
+                \\
+                1 && 0
+              \end{pmatrix}
+            \right]=2 i \dfrac{\hbar^2}{4} \begin{pmatrix}
+              0 && -i
+              \\
+              i && 0
+            \end{pmatrix}=i \hbar S_y
+            \\
+            \\
+          $
+        }
+
+      \item Show that the Pauli spin matrices (Equation 4.148) satisfy the product rule
+      $$
+        \sigma_j \sigma_k=\delta_{jk}+i ~ \sum\limits_{l} \epsilon_{jkl} \sigma_l
+      $$
+      where the indices stand for $x, y,$ or $z$, and $\epsilon_{jkl}$ is the \textbf{Levi-Civita} symbol:
+      $+1$ if $jkl=123, 231$ or $312;$ $-1$ if $jkl=132, 213,$ or $321; 0$ otherwise.
+
+        \textcolor{hwColor}{
+          \\
+          $
+            \sigma_x \sigma_y=\delta_{xy}+i ~ \sum\limits_{z} \epsilon_{xyz} \sigma_z
+            \\
+            \\
+            \begin{pmatrix}
+              0 && 1
+              \\
+              1 && 0
+            \end{pmatrix} \begin{pmatrix}
+              0 && -i
+              \\
+              i && 0
+            \end{pmatrix}=\begin{pmatrix}
+              i && 0 
+              \\
+              0 && -i
+            \end{pmatrix}=i \sigma_z
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma_y \sigma_x=\left[\sigma_x \sigma_y\right]^{\dagger}=-i \sigma_z
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma_y \sigma_z=\delta_{yz}+i ~ \sum\limits_{x} \epsilon_{yzx} \sigma_x
+            \\
+            \\
+            \begin{pmatrix}
+              0 && -i
+              \\
+              i && 0
+            \end{pmatrix} \begin{pmatrix}
+              1 && 0
+              \\
+              0 && -1
+            \end{pmatrix}=\begin{pmatrix}
+              0 && i 
+              \\
+              i && 0
+            \end{pmatrix}=i \sigma_x
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma_z \sigma_y=\left[\sigma_y \sigma_z\right]^{\dagger}=-i \sigma_x
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma_z \sigma_x=\delta_{zx}+i ~ \sum\limits_{y} \epsilon_{zxy} \sigma_y
+            \\
+            \\
+            \begin{pmatrix}
+              1 && 0
+              \\
+              0 && -1
+            \end{pmatrix} \begin{pmatrix}
+              0 && 1
+              \\
+              1 && 0
+            \end{pmatrix}=\begin{pmatrix}
+              0 && 1 
+              \\
+              -1 && 0
+            \end{pmatrix}=i \sigma_y
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma_x \sigma_z=\left[\sigma_z \sigma_x\right]^{\dagger}=-i \sigma_y
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma^2_x= \begin{pmatrix}
+              0 && 1
+              \\
+              1 && 0
+            \end{pmatrix} \begin{pmatrix}
+              0 && 1
+              \\
+              1 && 0
+            \end{pmatrix}=\begin{pmatrix}
+              1 && 0 
+              \\
+              0 && 1
+            \end{pmatrix}=\delta_{xx}
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma^2_y= \begin{pmatrix}
+              0 && -i
+              \\
+              i && 0
+            \end{pmatrix} \begin{pmatrix}
+              0 && -i
+              \\
+              i && 0
+            \end{pmatrix}=\begin{pmatrix}
+              1 && 0 
+              \\
+              0 && 1
+            \end{pmatrix}=\delta_{yy}
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \sigma^2_z= \begin{pmatrix}
+              1 && 0
+              \\
+              0 && -1
+            \end{pmatrix} \begin{pmatrix}
+              1 && 0
+              \\
+              0 && -1
+            \end{pmatrix}=\begin{pmatrix}
+              1 && 0 
+              \\
+              0 && 1
+            \end{pmatrix}=\delta_{zz}
+            \\
+            \\
+          $
+          \\
+          \\
+          Hence, the product rule is verified.
+        }
+      
+    \end{enumerate}
+
+    \pagebreak
+
+    \item \textbf{4-48} The electron in a hydrogen atom occupies the combined spin and position state
+    $$
+      \Psi=R_{21} \left(
+        \sqrt{\dfrac{1}{3}} Y_1^0 ~ \chi_+ +\sqrt{\dfrac{2}{3}} Y_1^1 \chi_-
+      \right)
+    $$
+
+    \textcolor{hwColor}{
+      \\
+      Interpretation:
+      \\
+      \\
+      $
+        \begin{cases}
+          R_{21} \Longrightarrow n=2, ~ \ell=1
+          \\
+          \\
+          Y_1^0 \Longrightarrow \ell=1, ~ m_{\ell}=0
+          \\
+          \\
+          \chi_+ \Longrightarrow s=\dfrac{1}{2}, ~ m_s=\dfrac{1}{2}
+          \\
+          \\
+          Y_1^1 \Longrightarrow \ell=1, ~ m_{\ell}=1
+          \\
+          \\
+          \chi_- \Longrightarrow s=\dfrac{1}{2}, ~ m_s=-\dfrac{1}{2}
+        \end{cases}
+        \therefore ~~~ m_{\ell}+m_s=\dfrac{1}{2}
+      $
+    }
+
+    \begin{enumerate}
+      \item If you measured the orbital angular momentum squared ($L^2$), what values might you get,
+      and what is the probability of each?
+
+        \textcolor{hwColor}{
+          \\
+          $
+            \ell=1 \Longrightarrow L^2 \Psi=\ell \hbar^2 \left(\ell+1\right) \Psi
+            \\
+            \\
+            \therefore ~~~ \hbar^2 \ell \left(\ell+1\right)=2 \hbar^2 \Longrightarrow P=1
+            \\
+            \\
+            \therefore ~~~~ \text{Probability is $100\%$}. ~~~~ \checkmark
+          $
+          \\
+        }
+
+      \item Same for the z-component of orbital angular momentum ($L_z$).
+
+        \textcolor{hwColor}{
+          \\
+          We have two possible values for $m_{\ell}$ which are $0$ and $1$.
+          \\
+          \\
+          $
+            \begin{cases}
+              m_{\ell}=0 \Longrightarrow P=\sqrt{\dfrac{1}{3}}^2=\dfrac{1}{3}
+              \\
+              \\
+              m_{\ell}=1 \Longrightarrow P=\sqrt{\dfrac{2}{3}}^2=\dfrac{2}{3}
+            \end{cases} ~~~~~ \checkmark
+          $
+          \\
+        }
+
+      \item Same for the spin angular momentum squared ($S^2$).
+
+        \textcolor{hwColor}{
+          \\
+          $
+            \Psi S^2=\Psi \hbar^2 S(S+1)
+            \\
+            \\
+            S=\dfrac{1}{2} \Longrightarrow \begin{cases}
+              P=1
+              \\
+              \\
+              \dfrac{3}{4} \hbar^2
+            \end{cases}
+          $
+          \\
+        }
+
+      \item Same for the z-component of spin angular momentum ($S_z$).
+
+        \textcolor{hwColor}{
+          \\
+          $
+            S_z \Psi=\Psi m_s \hbar, m_s=\pm\dfrac{1}{2}
+            \\
+            \\
+            \begin{cases}
+              m_s=+\dfrac{1}{2} \Longrightarrow P=\dfrac{1}{3}
+              \\
+              \\
+              m_s=-\dfrac{1}{2} \Longrightarrow P=\dfrac{2}{3}
+            \end{cases}
+            \\
+          $
+        }
+
+    \end{enumerate}
+  \end{enumerate}
+
+\end{document}
