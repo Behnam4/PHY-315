@@ -57,21 +57,101 @@
   \end{titlepage}
 
   \begin{enumerate}
-    \item A particle of spin $\dfrac{1}{2}$ is in a $p$ orbital $(L=1)$ of some potential.
+    \item A particle of spin $\dfrac{1}{2}$ is in a $p$ orbital $(\ell=1)$ of some potential.
     \begin{enumerate}
       \item What values of $J$, total angular momentum can it have?
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          Knowing that the particle has $s=\dfrac{1}{2}, \ell=1$ and considering that $J=L+S$, by the 
+          triangle rule gives $J=\left\{\dfrac{1}{2}, \dfrac{3}{2}\right\}$.
+          \\
+        }
 
       \item Use the method described in lecture (using the z-components and $\pm$ components of $J=L+S$
       to find the state $|j=1/2, j_z=1/2 \rangle$ in terms of the basis $|\ell=1, \ell_z \rangle|s=1/2, s_z \rangle$)
       Hint: First work out the $|j=3/2, j_z=3/2 \rangle$ then use orthogonality principle).
 
-        % \textcolor{hwColor}{
-        %   \\
-        % }
+        \textcolor{hwColor}{
+          \\
+          $j=3/2$ and $j_z=3/2$ can be reached in one manner.
+          \\
+          \\
+          $
+            |j=3/2, j_z=3/2 \rangle=| \ell=1, \ell_z=1 \rangle ~ | s=1/2, s_z=1/2 \rangle
+            \\
+            \\
+            \\
+            J-|j=\dfrac{3}{2}, j_z=\dfrac{3}{2}|=\hbar \sqrt{J\bigg( j+1 \bigg)-j_z \bigg( j_z-1\bigg) } ~ | j, j_z-1 \rangle
+            =\hbar ~ \sqrt{3} | j=3/2, j_z=1/2 \rangle
+            \\
+            \\
+            \\
+            \bigg( L_- + S_-\bigg) ~ | j=3/2, j_z=3/2 \rangle= \bigg( L_-+S_-\bigg) ~ | \ell=1, \ell_z=1 \rangle ~ | S=1/2, S_z=1/2 \rangle
+            \\
+            \\
+            \\
+            =\bigg( L_- |\ell=1, \ell_z=1 \rangle \bigg) ~ \bigg( S=1/2, S_z=1/2 \bigg)
+            +|\ell=1, \ell_z=1 \rangle ~ \bigg( S_- | S=1/2, S_z=1/2 \rangle \bigg)
+            \\
+            \\
+            \\
+            =\hbar \sqrt{1+(1+1)-(1-1)} ~ |\ell=1, \ell_z=0 \rangle ~ | S=1/2, S_z=1/2 \rangle
+            +| \ell=1 \rangle ~ | \ell_z=1 \rangle 
+            \\
+            \\
+            \bigg( 
+              \hbar \sqrt{1/2+(1/2+1)-1/2 (1/2-1)} ~ |S=1/2, S_z=1/2 \rangle  
+            \bigg)
+            \\
+            \\
+            \\
+            \\
+            \therefore ~~~ \sqrt{3} ~ \hbar ~ |\dfrac{3}{2}, \dfrac{1}{2} \rangle
+            =\hbar ~ |1,1 \rangle | \dfrac{1}{2}, -\dfrac{1}{2} \rangle+\sqrt{2} \hbar |1,0 \rangle ~ |\dfrac{1}{2}, \dfrac{1}{2} \rangle
+            \\
+            \\
+            \\
+          $
+          What we are looking for is $|\dfrac{1}{2}, \dfrac{1}{2} \rangle$. Posibilities with $j_z=\dfrac{1}{2}$ is that 
+          $| \ell=1, \ell_z \rangle ~ |S=1/2, S_z$ basis are in $| \dfrac{3}{2}, \dfrac{1}{2} \rangle$ which are;
+          \\
+          \\
+          $
+            \begin{cases}
+              |\ell=1, \ell_z=1 \rangle ~ |S=1/2, S_z=-1/2 \rangle
+              \\
+              \\
+              |\ell=1, \ell_z=0 \rangle ~ |S=1/2, S_z=1/3 \rangle
+            \end{cases}
+            \\
+            \\
+          $
+          $|j=1/2, j_z=1/2 \rangle$ is orthogonal and normalized to $|j=3/2, j_z=1/2 \rangle$ then we have:
+          \\
+          \\
+          $
+           \therefore ~~~ \boxed{
+            |j=1/2, j_z=1/2 \rangle=\sqrt{\dfrac{3}{2}} ~ |\ell=1, \ell_z=1 \rangle ~ |S=1/2, S_z=-1/2 \rangle
+            -\dfrac{1}{\sqrt{3}} ~ |\ell=1, \ell_z=0 \rangle ~ |S=1/2, S_z=1/2 \rangle
+           } ~~~~ \checkmark
+            \\
+            \\
+          $ 
+        }
+
+      % \bigg( \bigg)
+
+      \item If the system is initially prepared in the state $|j=1/2, j_z=1/2 \rangle$, what is the 
+      probability that measuring its value of $s_z$ would give $+1/2$?
+
+        \textcolor{hwColor}{
+          \\
+          In the previous section we found for the state $|j=1/2, j_z=1/2 \rangle$ the basis. Therfore,
+          the probability of measuring its value of $s_z$ gives $|-\dfrac{1}{\sqrt{3}}|^2=\dfrac{1}{3} ~~~~ \checkmark$.
+          \\
+          \\
+        }
 
     \end{enumerate}
 
