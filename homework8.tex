@@ -140,8 +140,6 @@
           $ 
         }
 
-      % \bigg( \bigg)
-
       \item If the system is initially prepared in the state $|j=1/2, j_z=1/2 \rangle$, what is the 
       probability that measuring its value of $s_z$ would give $+1/2$?
 
@@ -160,9 +158,88 @@
     is in a triplet spin state, find the energy levels, the wave functions, and the degeneracies corresponding 
     to the three lowest states.
 
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+      \textcolor{hwColor}{
+        \\
+        The spin triplet combination with two $S=\dfrac{1}{2}$ particles has a spin move function given by any of the 
+        symmetric S states.
+        \\
+        \\
+        $
+          \chi_{s}=\begin{cases}
+            \uparrow \uparrow = |1,1 \rangle=|1/2, 1/2 \rangle ~ |1/2, 1/2 \rangle
+            \\
+            \\
+            \uparrow \downarrow +\downarrow \uparrow=|1, 0 \rangle=\dfrac{1}{\sqrt{2}} \bigg( 
+              |1/2, 1/2 \rangle ~ |1/2, -1/2 \rangle+|1/2, -1/2 \rangle ~ |1/2, 1/2 \rangle  
+            \bigg)
+            \\
+            \\
+            \downarrow \downarrow=|1, -1 \rangle=|1/2, -1/2 \rangle ~ |1/2, -1/2 \rangle
+          \end{cases}
+          \\
+          \\
+        $
+        The eigenstate $|n \rangle$ with $\Psi_n\bigg( x \bigg)=\langle x | n \rangle=\sqrt{\dfrac{2}{L}} ~ sin\bigg( \dfrac{n \pi x}{L}\bigg)$
+        and the energy $E_n=\pi^2 \hbar^2 n^2/2,L^2$ and the antisymmetric combination is
+        $\dfrac{1}{\sqrt{2}} \left[|m \rangle ~ |n \rangle -|n \rangle ~ | m \rangle\right]$  (nonzero when $m \neq n$).
+        \\
+        \\
+        $
+          \Psi_{mn}=\dfrac{2}{L} \left[
+            sin \bigg( \dfrac{m \pi x_1}{L} \bigg) ~ sin\bigg( \dfrac{n \pi x_2}{L} \bigg)-sin \bigg( \dfrac{n \pi x_1}{L} \bigg) ~ sin \bigg( \dfrac{m \pi x_2}{L} \bigg) \chi_5
+          \right]
+          \\
+          \\
+          \\
+          E=E_m+E_n=\dfrac{\pi \hbar^2}{2 m L^2} \bigg( m^2+n^2\bigg)
+          \\
+          \\
+        $
+        The three loweest states are calculated from $(m,n)$ when they are not equal integers. 
+        \\
+        \\
+        $
+          \bigg( 1^2+2^2\bigg) < 1^2+3^2 < 2^2+3^2 < 1^2+4^2
+          \\
+          \\
+          \text{The grand state has } (1,2) ~ or ~ (2,1)
+          \\
+          \\
+          \therefore ~~~ \Psi_{12}=\dfrac{2}{L} \left[
+            sin \bigg( \dfrac{\pi x_1}{L} \bigg) ~ sin\bigg( \dfrac{2 \pi x_2}{L} \bigg)-sin \bigg( \dfrac{2 \pi x_1}{L} \bigg) ~ sin \bigg( \dfrac{\pi x_2}{L} \bigg) \chi_5
+          \right]
+          \\
+          \\
+          \\
+          E_{12}=\dfrac{5 \pi^2 \hbar^2}{2mL^2}=5 ~ E_0
+          \\
+          \\
+          \\
+          \text{First excited state}
+          \\
+          \\
+          \Psi_{13}=\dfrac{2}{L} \left[
+            sin \bigg( \dfrac{\pi x_1}{L} \bigg) ~ sin\bigg( \dfrac{3 \pi x_2}{L} \bigg)-sin \bigg( \dfrac{3 \pi x_1}{L} \bigg) ~ sin \bigg( \dfrac{\pi x_2}{L} \bigg)
+          \right]
+          \\
+          \\
+          E_{13}=10 E_0
+          \\
+          \\
+          \\
+          \text{Second excited state}
+          \\
+          \\
+          \Psi_{23}=\dfrac{2}{L} \left[
+            sin \bigg( \dfrac{ 2 \pi x_1}{L} \bigg) ~ sin\bigg(\dfrac{3 \pi x_2}{L} \bigg)-sin \bigg( \dfrac{3 \pi x_1}{L} \bigg) ~ sin \bigg( \dfrac{2 \pi x_2}{L} \bigg)
+          \right]
+          \\
+          \\
+          E_{23}=13 E_0
+          \\
+          \\
+        $
+      }
 
   \end{enumerate}
 
