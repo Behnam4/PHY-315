@@ -142,14 +142,135 @@
         $
       }
 
-    \item Begin by sketching the shapes of the two trial functions, as well as the shape
-    of the exact solution. Remember that these functions are $3D$ wave functions in spherical coordinates.
-    In order to minimize your chances for mistakes, write out your result for each integral (normalization,
-    kinetic \& potential) as you go along.
-
-      % \textcolor{hwColor}{
-      %   \\
-      % }
+    \item Estimate the ground state energy of the hydrogen atom by means of the variational method using 
+    the following two trial functions, find the relative errors, compare the two results, and discuss the 
+    merit of each trial function.
+    $$
+      (a) ~~~ \phi_a(r)=\begin{cases}
+        1-\dfrac{r}{a} r \leq a
+        \\
+        \\
+        0  ~~~~ r > a
+      \end{cases}
+    $$
+    where $a$ is an adjustable parameter. Find a relation between $\alpha_{min}$ and the Bohr radius.
+    $$
+      (b) ~~~ \phi_a(r)=A ~ e^{-\alpha r^2}
+    $$
+      \textcolor{hwColor}{
+        \\
+        $
+          (a)
+          \\
+          \\
+          \hat{H}=\dfrac{\overrightarrow{p}^2}{2 \mu }-\dfrac{e^2}{r}
+          \\
+          \\
+          \tilde{E}(\alpha)=\dfrac{
+            \langle \phi_{\alpha} |\hat{H}| \phi_{\alpha} \rangle
+          }{
+            \langle \phi_{\alpha} | \phi_{\alpha} \rangle
+          }, ~~~~ \text{knowing that } \dfrac{\partial \tilde{E}}{\partial \alpha}=0
+          \\
+          \\
+          \\
+          \langle \phi_{\alpha} | \phi_{\alpha} \rangle
+          =\bigints\limits_{0}^{a} ~ \bigints\limits_{0}^{\pi} ~ \bigints\limits_{0}^{2\pi} ~ r^2/2 \bigg( 1-\dfrac{r}{\alpha} \bigg)^2 sin\theta ~ dr ~ d\theta ~ d\phi
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \langle \phi_{\alpha} | \phi_{\alpha} \rangle=\dfrac{2 \pi \alpha^3}{15}
+          } ~~~~
+          \\
+          \\
+          \\
+          \\
+          \langle \phi_{\alpha} |\hat{H}| \phi_{\alpha} \rangle=
+          - \dfrac{4 \pi \hbar^2}{\mu \alpha^2} \bigints\limits_{0}^{a} r^2 dr+\dfrac{4 \pi \hbar^2}{\mu \alpha} \bigints\limits_{0}^{a} rdr-4 \pi e^2 \bigints\limits_{0}^{a} \bigg( r-\dfrac{2r^2}{\alpha}+\dfrac{r^3}{\alpha^2} \bigg)dr
+          \\
+          \\
+          \\
+          =-\dfrac{4 \pi \hbar^2 \alpha}{3 \mu}+\dfrac{2 \pi \hbar^2 \alpha}{\mu}-4 \pi e^2 \left[r^2-\dfrac{2r^3}{3 \alpha}+\dfrac{r^4}{4 \alpha^2}\right]\Big|_{0}^{\alpha}
+          \\
+          \\
+          \\
+          \langle \phi_{\alpha} |\hat{H}| \phi_{\alpha} \rangle=\dfrac{2 \pi \hbar^2 \alpha}{3 \mu}-\dfrac{7 \pi e^2 \alpha^2}{3}
+          \\
+          \\
+          \\
+          -\dfrac{10 \hbar^2}{\mu \alpha^3}+\dfrac{35 e^2}{2 \alpha^2}=0 \Longrightarrow 
+          \alpha=\dfrac{4 \hbar^2}{7 e^2 \mu} 
+          \\
+          \\
+          \\
+          \text{Estimate of ground state energy eigenvalue: } \tilde{E} \approx -15 \dfrac{\mu e^4}{\hbar^2}.
+          \\
+          \\
+        $
+        We know that the energy ground state for a hydrogen atom is $E=-\dfrac{1}{2} \dfrac{\mu e^4}{\hbar^2}$, therefore
+        what we found is a lot bigger than the exact solution.
+        \\
+        \\
+        \\
+        \\
+        \\
+        \\
+        $
+          (b)
+          \\
+          \\
+          \hat{E}(\alpha)=\dfrac{
+            \langle \phi_{\alpha} |\hat{H}| \phi_{\alpha} \rangle
+          }{
+            \langle \phi_{\alpha} | \phi_{\alpha} \rangle
+          }
+          \\
+          \\
+          \\
+          \langle \phi_{\alpha} | \phi_{\alpha} \rangle
+          =\bigints\limits_{0}^{a} \bigints\limits_{0}^{\pi} \bigints\limits_{0}^{2 \pi} A^2 r^2 e^{-2\alpha r^2} sin\theta dr ~ d\theta ~ d\phi
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \langle \phi_{\alpha} | \phi_{\alpha} \rangle=\dfrac{A^2 \pi}{2\alpha} \sqrt{\dfrac{\pi}{2 \alpha}}, ~~~ A^2=\dfrac{2 \alpha}{\pi} \sqrt{\dfrac{2 \alpha}{\pi}}
+          } ~~~~ \checkmark
+          \\
+          \\
+          \\
+          \langle \phi_{\alpha} |\hat{H}| \phi_{\alpha} \rangle
+          =-\dfrac{4 \pi \hbar^2 A^2}{2 \mu} \bigints\limits_{0}^{\infty} e^{-\alpha r^2} e^{-\alpha r^2} \dfrac{\partial }{\partial r} \bigg( r^2 \dfrac{\partial }{\partial} \bigg) dr
+          -4 \pi A^2 e^2 \bigints\limits_{0}^{\infty} r^2 e^{-2\alpha r^2} \dfrac{1}{r} dr
+          \\
+          \\
+          \\
+          -\dfrac{\hbar^2 A^2 \pi}{\mu} \bigints\limits_{0}^{\infty} e^{-\alpha r^2} e^{-\alpha r^2} \dfrac{\partial }{\partial r} \bigg( r^2 \dfrac{\partial }{\partial r}\bigg) dr
+          =-\dfrac{4 \hbar^2 \alpha}{\mu} \sqrt{\dfrac{2 \alpha}{\pi}} \left[
+            -6 \alpha \bigints\limits_{0}^{\infty} r^2 e^{-2 \alpha r^2} dr+\bigints\limits_{0}^{\infty} 4 \alpha^2 r^4 e^{-2 \alpha r^2} dr
+          \right]
+          =\dfrac{3 \hbar^2 \alpha}{2 \mu}
+          \\
+          \\
+          \\
+          \\
+          4 \pi A^2 e^2 \bigints\limits_{0}^{\infty} r^2 e^{-2 \alpha r^2} \dfrac{dr}{r}=2 \pi e^2 A^2 \bigints\limits_{0}^{\infty} e^{-2 \alpha r^2} d\xi=2e^2 \sqrt{\dfrac{2 \alpha}{\pi}}, ~~~~ \xi=r^2
+          \\
+          \\
+          \\
+          \hat{E}(\alpha)=\dfrac{3 \alpha \hbar^2}{2 \mu}-2e^2 \sqrt{\dfrac{2 \alpha }{\pi}} 
+          \Longrightarrow \dfrac{\partial \hat{E}(\alpha)}{\partial \alpha}=\dfrac{3 \hbar^2}{2 \mu}-e^2 \sqrt{\dfrac{2}{\mu \alpha}}=0
+          \Longrightarrow \alpha =\dfrac{2}{\pi} \bigg( \dfrac{2 \mu e^2}{3 \hbar^3} \bigg)^2
+          \\
+          \\
+          \\
+          \therefore ~~~ \boxed{
+            \hat{E}(\alpha)=-\dfrac{4}{3} \dfrac{\mu e^4}{\pi \hbar^2}, ~~~ \dfrac{\hat{E}(\alpha)}{E}=\dfrac{8}{3 \pi}
+          } ~~~~ \checkmark
+          \\
+          \\
+        $
+      }
 
   \end{enumerate}
 
